@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart - Village to World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <script src="cart.js" defer></script>
+</head>
+<body>
+<header>Your Shopping Cart</header>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="partnership.html">Partnership</a>
+  <a href="cart.html" class="active">Cart</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</nav>
+
+<main class="container">
+  <section class="cart-section">
+    <table class="cart-table" id="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Image</th>
+          <th>Price (₹)</th>
+          <th>Quantity</th>
+          <th>Total (₹)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items added dynamically -->
+      </tbody>
+    </table>
+    <div class="cart-total">
+      <strong>Total: ₹<span id="cart-total">0</span></strong>
+    </div>
+    <button id="checkout-btn" disabled>Checkout</button>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* signup.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #27ae60;
+  color: white;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: #2ecc71;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  background: #27ae60;
+}
+
+/* Main container */
+main.container {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #27ae60;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Form container */
+form.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+form.form-container label {
+  margin-bottom: 4px; /* reduced spacing */
+  display: block;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs */
+form.form-container input[type="text"],
+form.form-container input[type="email"],
+form.form-container input[type="password"] {
+  margin-bottom: 8px; /* reduced spacing */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #27ae60;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form.form-container input[type="text"]:focus,
+form.form-container input[type="email"]:focus,
+form.form-container input[type="password"]:focus {
+  border-color: #2ecc71;
+}
+
+/* Button */
+form.form-container button.btn {
+  margin-top: 10px; /* reduced spacing */
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+form.form-container button.btn:hover {
+  background-color: #2ecc71;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  main.container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  form.form-container input,
+  form.form-container button.btn {
+    font-size: 1rem;
+  }
+}

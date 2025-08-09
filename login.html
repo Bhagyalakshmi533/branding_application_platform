@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Village to World</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <header>Village to World</header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="partnership.html">Partnership</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html" class="active">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+
+  <main class="container">
+    <h2>Login</h2>
+    <form class="form-container" onsubmit="return false;">
+      <label for="email">Email:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      /><br />
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+      /><br />
+      <button class="btn" type="submit">Login</button>
+    </form>
+  </main>
+
+  <script>
+    document.querySelector('form.form-container').addEventListener('submit', e => {
+      e.preventDefault();
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

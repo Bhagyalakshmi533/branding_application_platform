@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up - Village to World</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <header>Village to World</header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="partnership.html">Partnership</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html" class="active">Sign Up</a>
+  </nav>
+
+  <main class="container">
+    <h2>Create Account</h2>
+    <form class="form-container" onsubmit="return false;">
+      <label for="fullname">Full Name</label><br />
+      <input
+        id="fullname"
+        name="fullname"
+        type="text"
+        placeholder="Your full name"
+        required
+      /><br />
+      <label for="email">Email Address</label><br />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="example@mail.com"
+        required
+      /><br />
+      <label for="password">Password</label><br />
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="At least 6 characters"
+        required
+      /><br />
+      <label for="confirm-password">Confirm Password</label><br />
+      <input
+        id="confirm-password"
+        name="confirm-password"
+        type="password"
+        placeholder="Re-enter password"
+        required
+      /><br />
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+  </main>
+
+  <script>
+    document.querySelector('form.form-container').addEventListener('submit', e => {
+      e.preventDefault();
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>

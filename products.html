@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products - Village to World</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="cart.js" defer></script>
+</head>
+<body>
+<header>Village to World</header>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="products.html" class="active">Products</a>
+  <a href="partnership.html">Partnership</a>
+  <a href="cart.html">Cart</a>
+  <a href="login.html">Login</a>
+  <a href="signup.html">Sign Up</a>
+</nav>
+
+<main class="container">
+  <h2>Our Products</h2>
+
+  <input id="searchBar" placeholder="Search products..." onkeyup="searchProducts()" />
+
+  <div class="product-grid" id="productGrid">
+    <div class="product">
+      <img src="images/handmade basket.jpg" alt="Handmade Basket" />
+      <h3>Handmade Basket</h3>
+      <p>₹1500</p>
+      <button class="btn" onclick="addToCart('Handmade Basket', 1500, 'images/handmade basket.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/pottery vase.jpg" alt="Clay Pot" />
+      <h3>Clay Pot</h3>
+      <p>₹1600</p>
+      <button class="btn" onclick="addToCart('Clay Pot', 1600, 'images/pottery vase.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/handmade rug.jpg" alt="Woven Mat" />
+      <h3>Woven Mat</h3>
+      <p>₹2000</p>
+      <button class="btn" onclick="addToCart('Woven Mat', 2000, 'images/handmade rug.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/wooden spoon set.jpg" alt="Wooden Spoon Set" />
+      <h3>Wooden Spoon Set</h3>
+      <p>₹800</p>
+      <button class="btn" onclick="addToCart('Wooden Spoon Set', 800, 'images/wooden spoon set.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/hand painted mug.jpg" alt="Hand-painted Mug" />
+      <h3>Hand-painted Mug</h3>
+      <p>₹950</p>
+      <button class="btn" onclick="addToCart('Hand-painted Mug', 950, 'images/hand painted mug.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/handwoven scarf.jpg" alt="Woolen Scarf" />
+      <h3>Woolen Scarf</h3>
+      <p>₹1400</p>
+      <button class="btn" onclick="addToCart('Woolen Scarf', 1400, 'images/handwoven scarf.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/handmade jewellery.jpg" alt="Handmade Jewellery" />
+      <h3>Handmade Jewellery</h3>
+      <p>₹1400</p>
+      <button class="btn" onclick="addToCart('Handmade Jewellery', 1400, 'images/handmade jewellery.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/clay figurine.jpg" alt="Clay Figurine" />
+      <h3>Clay Figurine</h3>
+      <p>₹1400</p>
+      <button class="btn" onclick="addToCart('Clay Figurine', 1400, 'images/clay figurine.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/wooden carving.jpg" alt="Wooden Carving" />
+      <h3>Wooden Carving</h3>
+      <p>₹900</p>
+      <button class="btn" onclick="addToCart('Wooden Carving', 900, 'images/wooden carving.jpg')">Add to Cart</button>
+    </div>
+  </div>
+</main>
+
+<script>
+function addToCart(name, price, image) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ name, price, image, quantity: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`Added ${name} to cart!`);
+}
+
+function searchProducts() {
+  const q = document.getElementById('searchBar').value.toLowerCase();
+  const cards = document.querySelectorAll('.product');
+  cards.forEach(card => {
+    const name = card.querySelector('h3').innerText.toLowerCase();
+    card.style.display = name.includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

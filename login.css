@@ -1,0 +1,81 @@
+/* login.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #27ae60;
+  color: white;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: #2ecc71;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  background: #27ae60;
+}
+
+/* Main container */
+main.container {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #27ae60;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Form container */
+form.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+form.form-container label {
+  margin-bottom: 4px; /* reduced spacing */
+  display: block;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs */
