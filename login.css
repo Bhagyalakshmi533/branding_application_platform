@@ -1,4 +1,4 @@
-/* login.css */
+/* login.css - aligned with signup layout */
 
 * {
   box-sizing: border-box;
@@ -48,20 +48,23 @@ nav a:hover {
 
 /* Main container */
 main.container {
-  max-width: 400px;
+  max-width: 500px;    /* max width on large screens */
+  width: 90%;          /* scales down on smaller screens */
   margin: 2rem auto;
+  padding: 2.5rem 1.5rem; /* left-right padding reduced for small */
   background: white;
-  padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
+
 
 /* Headings */
 h2 {
   text-align: center;
   color: #27ae60;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* slightly bigger spacing */
   font-weight: 700;
+  font-size: 2rem;
 }
 
 /* Form container */
@@ -72,10 +75,66 @@ form.form-container {
 
 /* Labels */
 form.form-container label {
-  margin-bottom: 4px; /* reduced spacing */
-  display: block;
+  margin-bottom: 6px; /* match signup spacing */
   font-weight: 600;
   color: #444;
+  display: block;
+  font-size: 1rem;
 }
 
 /* Inputs */
+form.form-container input[type="email"],
+form.form-container input[type="password"] {
+  margin-bottom: 15px; /* larger space like signup */
+  padding: 0.75rem 1.2rem; /* bigger padding */
+  font-size: 1.1rem;
+  width: 100%;
+  border-radius: 25px; /* rounded like signup */
+  border: 2px solid #27ae60;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form.form-container input[type="email"]:focus,
+form.form-container input[type="password"]:focus {
+  border-color: #2ecc71;
+}
+
+/* Button */
+form.form-container button.btn {
+  margin-top: 10px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.2rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 5px 12px rgba(39, 174, 96, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form.form-container button.btn:hover {
+  background-color: #2ecc71;
+  box-shadow: 0 7px 14px rgba(46, 204, 113, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main.container {
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  form.form-container input[type="email"],
+  form.form-container input[type="password"],
+  form.form-container button.btn {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 12px;
+  }
+}
